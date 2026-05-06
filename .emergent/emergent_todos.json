@@ -4,7 +4,7 @@
     "status": "completed"
   },
   {
-    "content": "Phase 1: 编写 test_core.py 核心验证脚本（数据抓取 + 指标计算 + 报告生成）",
+    "content": "Phase 1: 编写 test_core.py 核心验证脚本",
     "status": "completed"
   },
   {
@@ -16,31 +16,31 @@
     "status": "completed"
   },
   {
-    "content": "Phase 2: 设置后端环境（安装依赖、创建目录结构、配置 YAML）",
+    "content": "Phase 2: 设置后端环境、创建目录结构、配置 YAML",
     "status": "completed"
   },
   {
-    "content": "Phase 2: 实现后端核心模块（data_providers, indicators, strategy, report）",
+    "content": "Phase 2: 实现后端核心模块",
     "status": "completed"
   },
   {
-    "content": "Phase 2: 实现后端 FastAPI 端点（/api/market/overview, /api/portfolio, /api/watchlist, /api/reports 等）",
+    "content": "Phase 2: 实现后端 FastAPI 端点",
     "status": "completed"
   },
   {
-    "content": "Phase 2: 实现前端 React Dashboard（7 页面，含图表、F&G 仪表）",
+    "content": "Phase 2: 实现前端 React Dashboard（7 页面）",
     "status": "completed"
   },
   {
-    "content": "Phase 2: 修复发现的问题（akshare 限流 -> Sina fallback、YAML 语法、报告变量重名）",
+    "content": "Phase 2: 修复发现的问题",
     "status": "completed"
   },
   {
-    "content": "Phase 2: 调用 testing_agent_v3 进行端到端测试",
+    "content": "Phase 2: 调用 testing_agent_v3 进行端到端测试（100% pass）",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 2: 交付总结 + finish",
     "status": "in_progress"
-  },
-  {
-    "content": "Phase 2: 修复测试 agent 发现的问题（如果有）",
-    "status": "pending"
   }
 ]
