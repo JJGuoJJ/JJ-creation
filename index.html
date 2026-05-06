@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>每日主力资金动向监控</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="topbar" aria-label="主导航">
+        <div class="brand">JJ Creation</div>
+        <a href="#capital-flow" class="nav-link">主力资金监控</a>
+      </nav>
+      <section class="hero__content">
+        <p class="eyebrow">Daily Smart Money Watch</p>
+        <h1>每日主力资金动向监控</h1>
+        <p class="hero__summary">
+          聚合沪深 A 股行业与个股的主力净流入、强度、连续性和风险信号，帮助你在每日盘后快速定位资金偏好。
+        </p>
+      </section>
+    </header>
+
+    <main id="capital-flow" class="dashboard" data-testid="capital-flow-page">
+      <section class="toolbar" aria-labelledby="toolbar-title">
+        <div>
+          <p class="eyebrow">监控条件</p>
+          <h2 id="toolbar-title">筛选与预警</h2>
+        </div>
+        <div class="controls">
+          <label>
+            交易日
+            <input id="trade-date" type="date" />
+          </label>
+          <label>
+            行业
+            <select id="sector-filter">
+              <option value="全部">全部行业</option>
+            </select>
+          </label>
+          <label>
+            信号
+            <select id="signal-filter">
+              <option value="全部">全部信号</option>
+              <option value="强势流入">强势流入</option>
+              <option value="温和流入">温和流入</option>
+              <option value="资金分歧">资金分歧</option>
+              <option value="明显流出">明显流出</option>
+            </select>
+          </label>
+          <label>
+            净流入预警（亿元）
+            <input id="alert-threshold" type="number" min="0" step="0.1" value="5" />
+          </label>
+        </div>
+      </section>
+
+      <section class="cards" aria-label="主力资金汇总">
+        <article class="metric-card metric-card--primary">
+          <span>主力净流入</span>
+          <strong id="summary-net">--</strong>
+          <small id="summary-net-note">等待数据加载</small>
+        </article>
+        <article class="metric-card">
+          <span>流入股票数</span>
+          <strong id="summary-inflow-count">--</strong>
+          <small>净流入大于 0 的标的</small>
+        </article>
+        <article class="metric-card">
+          <span>强势流入</span>
+          <strong id="summary-strong-count">--</strong>
+          <small>净流入 ≥ 预警线</small>
+        </article>
+        <article class="metric-card">
+          <span>平均资金强度</span>
+          <strong id="summary-strength">--</strong>
+          <small>净流入 / 成交额</small>
+        </article>
+      </section>
+
+      <section class="panel-grid">
+        <article class="panel">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Sector Heat</p>
+              <h2>行业资金热度</h2>
+            </div>
+            <span class="pill">按净流入排序</span>
+          </div>
+          <div id="sector-bars" class="bar-list" aria-live="polite"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Alert Center</p>
+              <h2>今日预警</h2>
+            </div>
+            <span id="alert-count" class="pill pill--warning">0 条</span>
+          </div>
+          <ul id="alert-list" class="alert-list" aria-live="polite"></ul>
+        </article>
+      </section>
+
+      <section class="panel table-panel">
+        <div class="panel__header panel__header--table">
+          <div>
+            <p class="eyebrow">Stock Detail</p>
+            <h2>个股主力资金明细</h2>
+          </div>
+          <div class="table-actions">
+            <button id="load-sample" type="button">加载示例数据</button>
+            <label class="upload-button">
+              导入 CSV
+              <input id="csv-upload" type="file" accept=".csv,text/csv" />
+            </label>
+          </div>
+        </div>
+        <div class="csv-tip">
+          CSV 字段：code,name,sector,netInflow,turnover,close,changePct,streak。金额单位为“亿元”。
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>代码</th>
+                <th>名称</th>
+                <th>行业</th>
+                <th>主力净流入</th>
+                <th>成交额</th>
+                <th>资金强度</th>
+                <th>涨跌幅</th>
+                <th>连续天数</th>
+                <th>监控信号</th>
+              </tr>
+            </thead>
+            <tbody id="flow-table-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
