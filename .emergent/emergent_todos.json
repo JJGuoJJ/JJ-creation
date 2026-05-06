@@ -1,0 +1,42 @@
+[
+  {
+    "content": "Phase 1: 获取 Emergent LLM Key 和核心数据源确认",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 1: 编写 test_core.py 核心验证脚本（数据抓取 + 指标计算 + 报告生成）",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 1: 运行 test_core.py 并修复问题直到 12 项检查全部通过",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 2: 调用 design_agent 获取专业金融仪表盘设计规范",
+    "status": "in_progress"
+  },
+  {
+    "content": "Phase 2: 设置后端环境（安装依赖、创建目录结构、配置 YAML）",
+    "status": "pending"
+  },
+  {
+    "content": "Phase 2: 实现后端核心模块（data_providers, indicators, strategy, report）",
+    "status": "pending"
+  },
+  {
+    "content": "Phase 2: 实现后端 FastAPI 端点（/api/market/overview, /api/portfolio, /api/watchlist, /api/reports 等）",
+    "status": "pending"
+  },
+  {
+    "content": "Phase 2: 实现前端 React Dashboard（7 页面，含图表、F&G 仪表）",
+    "status": "pending"
+  },
+  {
+    "content": "Phase 2: 所有用户故事 U1-U12 覆盖验证",
+    "status": "pending"
+  },
+  {
+    "content": "Phase 2: 调用 testing_agent_v3 进行端到端测试",
+    "status": "pending"
+  }
+]

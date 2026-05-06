@@ -1,0 +1,141 @@
+{
+  "akshare": {
+    "ok": true,
+    "details": {
+      "index_count": 6,
+      "stock_sample_ok": false,
+      "total_turnover_wanyi": null
+    },
+    "data_keys": [
+      "indices",
+      "stock_sample",
+      "total_turnover"
+    ]
+  },
+  "yfinance": {
+    "ok": true,
+    "details": {
+      "fetched": 27,
+      "total": 27,
+      "failed": []
+    },
+    "data_keys": [
+      "^GSPC",
+      "^IXIC",
+      "^NDX",
+      "^DJI",
+      "^RUT",
+      "^VIX",
+      "^TNX",
+      "DX-Y.NYB",
+      "SOXX",
+      "SMH",
+      "GLD",
+      "USO",
+      "BTC-USD",
+      "ETH-USD",
+      "NVDA",
+      "AMD",
+      "AVGO",
+      "MSFT",
+      "GOOGL",
+      "AMZN",
+      "META",
+      "TSM",
+      "ASML",
+      "MU",
+      "MRVL",
+      "SMCI",
+      "PLTR"
+    ]
+  },
+  "crypto_fng": {
+    "ok": true,
+    "details": {},
+    "data_keys": [
+      "current",
+      "history"
+    ]
+  },
+  "technical": {
+    "ok": true,
+    "details": {},
+    "data_keys": [
+      "sh000001",
+      "sh000300",
+      "NVDA",
+      "^VIX",
+      "BTC-USD"
+    ]
+  },
+  "global_fng": {
+    "ok": "True",
+    "details": {},
+    "data_keys": [
+      "score",
+      "breakdown",
+      "missing"
+    ]
+  },
+  "china_tech_fng": {
+    "ok": "True",
+    "details": {},
+    "data_keys": [
+      "score",
+      "breakdown",
+      "missing"
+    ]
+  },
+  "ai_chain_heat": {
+    "ok": true,
+    "details": {},
+    "data_keys": [
+      "光模块",
+      "先进封装",
+      "HBM存储",
+      "电力液冷",
+      "AI服务器",
+      "全球AI芯片"
+    ]
+  },
+  "regime": {
+    "ok": true,
+    "details": {},
+    "data_keys": [
+      "combined_score",
+      "regime",
+      "action",
+      "global_fng",
+      "china_fng",
+      "ai_peak_heat"
+    ]
+  },
+  "allocation": {
+    "ok": true,
+    "details": {},
+    "data_keys": [
+      "regime",
+      "bands"
+    ]
+  },
+  "recommendation": {
+    "ok": true,
+    "details": {},
+    "data_keys": "see_report"
+  },
+  "llm": {
+    "ok": true,
+    "details": {},
+    "data_keys": [
+      "interpretation"
+    ]
+  },
+  "report": {
+    "ok": true,
+    "details": {},
+    "data_keys": [
+      "path",
+      "preview"
+    ]
+  }
+}
