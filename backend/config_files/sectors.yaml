@@ -1,0 +1,35 @@
+# 赛道定义 + 代表性标的
+sectors:
+  AI算力:
+    representatives_cn: ['603019.SH', '000977.SZ']
+    representatives_us: []
+  光模块:
+    representatives_cn: ['002281.SZ', '603083.SH', '300308.SZ']
+    representatives_us: []
+  先进封装:
+    representatives_cn: ['600584.SH', '002156.SZ', '002185.SZ', '688362.SH']
+    representatives_us: ['TSM']
+  HBM存储:
+    representatives_cn: ['688008.SH', '603986.SH', '301308.SZ']
+    representatives_us: ['MU']
+  半导体测试:
+    representatives_cn: ['300604.SZ', '688200.SH', '300567.SZ']
+    representatives_us: []
+  电力液冷:
+    representatives_cn: ['600406.SH', '002837.SZ', '002028.SZ', '300499.SZ', '301018.SZ', '002851.SZ', '688676.SH']
+    representatives_us: []
+  AI服务器:
+    representatives_cn: ['000977.SZ', '603019.SH']
+    representatives_us: ['SMCI']
+  全球AI芯片:
+    representatives_cn: []
+    representatives_us: ['NVDA', 'AMD', 'AVGO', 'MRVL']
+  全球AI平台:
+    representatives_cn: []
+    representatives_us: ['MSFT', 'GOOGL', 'AMZN', 'META', 'PLTR']
+  半导体设备:
+    representatives_cn: []
+    representatives_us: ['ASML']
+  比特币加密:
+    representatives_cn: []
+    representatives_us: ['BTC-USD', 'ETH-USD']

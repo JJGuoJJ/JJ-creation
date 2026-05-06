@@ -1,0 +1,76 @@
+# 策略阈值（可在 Settings 页面编辑）
+
+# Fear & Greed 阈值
+fng_thresholds:
+  extreme_fear: 25
+  fear: 40
+  neutral: 60
+  greed: 75
+  extreme_greed: 90
+
+# 风险偏好
+risk_profile: medium_high  # conservative / balanced / medium_high / high
+
+# 默认目标仓位（中风险偏好）
+target_allocation_default:
+  total_equity_pct: [45, 75]
+  ai_tech_pct: [30, 60]
+  cn_ai_tech_pct: [20, 35]
+  global_ai_tech_pct: [10, 25]
+  packaging_hbm_cooling_pct: [20, 35]
+  gold_energy_military_cash_pct: [15, 30]
+  bitcoin_pct: [0, 10]
+
+# Regime -> Allocation Bands
+regime_allocation:
+  Extreme Fear:
+    equity: [65, 75]
+    ai_tech: [45, 60]
+    packaging_hbm_cool: [25, 35]
+    gold_energy: [10, 20]
+    btc: [3, 8]
+    cash: [5, 15]
+  Fear:
+    equity: [60, 70]
+    ai_tech: [40, 55]
+    packaging_hbm_cool: [20, 30]
+    gold_energy: [15, 25]
+    btc: [3, 8]
+    cash: [10, 20]
+  Neutral:
+    equity: [55, 65]
+    ai_tech: [35, 50]
+    packaging_hbm_cool: [20, 30]
+    gold_energy: [15, 25]
+    btc: [2, 7]
+    cash: [15, 25]
+  Greed:
+    equity: [50, 60]
+    ai_tech: [30, 45]
+    packaging_hbm_cool: [15, 25]
+    gold_energy: [15, 25]
+    btc: [2, 6]
+    cash: [20, 30]
+  Extreme Greed:
+    equity: [40, 50]
+    ai_tech: [20, 35]
+    packaging_hbm_cool: [10, 20]
+    gold_energy: [15, 25]
+    btc: [1, 5]
+    cash: [30, 45]
+  Bubble Risk:
+    equity: [25, 40]
+    ai_tech: [10, 25]
+    packaging_hbm_cool: [5, 15]
+    gold_energy: [20, 30]
+    btc: [0, 3]
+    cash: [35, 55]
+
+# 风险信号触发条件
+risk_signals:
+  high_rsi: 75
+  extreme_rsi: 80
+  high_volume_ratio: 2.0
+  extreme_volume_ratio: 3.0
+  high_pct_above_ma20: 15
+  extreme_pct_above_ma20: 25

@@ -1,0 +1,31 @@
+# 策略画像配置
+risk_profile: medium_high
+
+# 总仓位上下限（依据风险偏好）
+risk_profiles:
+  conservative:
+    max_equity: 50
+    max_high_beta: 25
+    min_cash: 25
+  balanced:
+    max_equity: 65
+    max_high_beta: 35
+    min_cash: 15
+  medium_high:
+    max_equity: 75
+    max_high_beta: 50
+    min_cash: 10
+  high:
+    max_equity: 85
+    max_high_beta: 60
+    min_cash: 5
+
+# 推荐评分权重
+recommendation_weights:
+  sector_heat: 0.25
+  momentum: 0.20
+  pullback_value: 0.15
+  relative_strength: 0.15
+  risk_control: 0.10
+  news_catalyst: 0.10
+  portfolio_fit: 0.05

@@ -1,0 +1,48 @@
+watchlist:
+  # 先进封装
+  '600584.SH': {name: 长电科技, sector: 先进封装, role: core, market: CN}
+  '002156.SZ': {name: 通富微电, sector: 先进封装, role: core, market: CN}
+  '002185.SZ': {name: 华天科技, sector: 先进封装, role: satellite, market: CN}
+  '688362.SH': {name: 甬矽电子, sector: 先进封装, role: satellite, market: CN}
+
+  # HBM / 存储 / 测试
+  '688008.SH': {name: 澜起科技, sector: HBM存储, role: core, market: CN}
+  '301308.SZ': {name: 江波龙, sector: HBM存储, role: aggressive, market: CN}
+  '300604.SZ': {name: 长川科技, sector: 半导体测试, role: aggressive, market: CN}
+  '688200.SH': {name: 华峰测控, sector: 半导体测试, role: core, market: CN}
+  '300567.SZ': {name: 精测电子, sector: 半导体测试, role: satellite, market: CN}
+
+  # 电力液冷
+  '600406.SH': {name: 国电南瑞, sector: 电力液冷, role: defensive_core, market: CN}
+  '002837.SZ': {name: 英维克, sector: 电力液冷, role: core, market: CN}
+  '688676.SH': {name: 金盘科技, sector: 电力液冷, role: aggressive, market: CN}
+  '002028.SZ': {name: 思源电气, sector: 电力液冷, role: core, market: CN}
+  '300499.SZ': {name: 高澜股份, sector: 电力液冷, role: satellite, market: CN}
+  '301018.SZ': {name: 申菱环境, sector: 电力液冷, role: satellite, market: CN}
+  '002851.SZ': {name: 麦格米特, sector: 电力液冷, role: aggressive, market: CN}
+
+  # 原有 AI 主线
+  '002281.SZ': {name: 光迅科技, sector: 光模块, role: core, market: CN}
+  '603083.SH': {name: 剑桥科技, sector: 光模块, role: aggressive, market: CN}
+  '603019.SH': {name: 中科曙光, sector: AI服务器, role: core, market: CN}
+  '000977.SZ': {name: 浪潮信息, sector: AI服务器, role: core, market: CN}
+  '603986.SH': {name: 兆易创新, sector: HBM存储, role: core, market: CN}
+
+  # 全球 AI
+  'NVDA': {name: Nvidia, sector: 全球AI芯片, role: core, market: US}
+  'AMD':  {name: AMD, sector: 全球AI芯片, role: aggressive, market: US}
+  'AVGO': {name: Broadcom, sector: 全球AI芯片, role: core, market: US}
+  'MSFT': {name: Microsoft, sector: 全球AI平台, role: core, market: US}
+  'GOOGL': {name: Alphabet, sector: 全球AI平台, role: core, market: US}
+  'AMZN': {name: Amazon, sector: 全球AI平台, role: core, market: US}
+  'META': {name: Meta, sector: 全球AI平台, role: core, market: US}
+  'TSM':  {name: TSMC, sector: 先进封装, role: core, market: US}
+  'MU':   {name: Micron, sector: HBM存储, role: aggressive, market: US}
+  'ASML': {name: ASML, sector: 半导体设备, role: core, market: US}
+  'MRVL': {name: Marvell, sector: 全球AI芯片, role: aggressive, market: US}
+  'SMCI': {name: Supermicro, sector: AI服务器, role: aggressive, market: US}
+  'PLTR': {name: Palantir, sector: 全球AI平台, role: aggressive, market: US}
+
+  # Crypto
+  'BTC-USD': {name: Bitcoin, sector: 比特币加密, role: macro_high_beta, market: Crypto}
+  'ETH-USD': {name: Ethereum, sector: 比特币加密, role: satellite, market: Crypto}

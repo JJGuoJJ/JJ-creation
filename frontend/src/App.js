@@ -1,54 +1,67 @@
-import { useEffect } from "react";
-import "@/App.css";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import { Toaster } from "./components/ui/sonner";
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
+import Overview from "./pages/Overview";
+import Portfolio from "./pages/Portfolio";
+import Sectors from "./pages/Sectors";
+import Watchlist from "./pages/Watchlist";
+import Sentiment from "./pages/Sentiment";
+import Reports from "./pages/Reports";
+import Settings from "./pages/Settings";
+import "./App.css";
+import api from "./lib/api";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
+export default function App() {
+  const [collapsed, setCollapsed] = useState(false);
+  const [dark, setDark] = useState(true);
+  const [market, setMarket] = useState("CN");
+  const [lastUpdate, setLastUpdate] = useState(null);
+  const [refreshTick, setRefreshTick] = useState(0);
 
   useEffect(() => {
-    helloWorldApi();
-  }, []);
+    document.documentElement.classList.toggle("dark", dark);
+  }, [dark]);
+
+  useEffect(() => {
+    api.health().then((h) => {
+      if (h.last_data_date) setLastUpdate(`最近数据日期 · ${h.last_data_date}`);
+      else setLastUpdate("尚未初次刷新");
+    }).catch(() => setLastUpdate("后端连接失败"));
+  }, [refreshTick]);
+
+  const onRefreshDone = () => setRefreshTick((t) => t + 1);
 
   return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
-
-function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen bg-background text-foreground app-bg">
+        <div className="flex">
+          <Sidebar collapsed={collapsed} setCollapsed={setCollapsed} />
+          <div className="flex-1 min-w-0">
+            <Header
+              market={market}
+              setMarket={setMarket}
+              dark={dark}
+              setDark={setDark}
+              lastUpdate={lastUpdate}
+              onRefreshDone={onRefreshDone}
+            />
+            <main className="px-4 lg:px-6 py-5 lg:py-6 max-w-[1600px] mx-auto">
+              <Routes>
+                <Route path="/" element={<Overview market={market} refreshTick={refreshTick} />} />
+                <Route path="/portfolio" element={<Portfolio market={market} refreshTick={refreshTick} />} />
+                <Route path="/sectors" element={<Sectors market={market} refreshTick={refreshTick} />} />
+                <Route path="/watchlist" element={<Watchlist market={market} refreshTick={refreshTick} />} />
+                <Route path="/sentiment" element={<Sentiment refreshTick={refreshTick} />} />
+                <Route path="/reports" element={<Reports refreshTick={refreshTick} />} />
+                <Route path="/settings" element={<Settings refreshTick={refreshTick} onRefreshDone={onRefreshDone} />} />
+              </Routes>
+            </main>
+          </div>
+        </div>
+        <Toaster position="top-right" richColors closeButton />
+      </div>
+    </BrowserRouter>
   );
 }
-
-export default App;

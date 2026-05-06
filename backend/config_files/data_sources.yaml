@@ -1,0 +1,48 @@
+# 数据源配置
+providers:
+  primary:
+    cn_stock: akshare
+    cn_index: akshare
+    global_stock: yfinance
+    global_index: yfinance
+    crypto: yfinance
+    crypto_fng: alternative_me
+  fallback: {}
+  optional:
+    macro: fred  # 需 FRED_API_KEY
+    news: alphavantage  # 需 ALPHAVANTAGE_API_KEY
+  rate_limit:
+    akshare_sleep_seconds: 0.4
+    yfinance_sleep_seconds: 0.1
+  timeout_seconds: 30
+
+# 缓存
+cache:
+  enabled: true
+  ttl_hours: 12
+
+# A股指数列表
+cn_indices:
+  sh000001: 上证指数
+  sh000300: 沪深300
+  sh000688: 科创50
+  sz399001: 深证成指
+  sz399006: 创业板指
+  sz399905: 中证500
+
+# 全球指数 / ETF
+global_tickers:
+  '^GSPC': S&P 500
+  '^IXIC': Nasdaq Composite
+  '^NDX':  Nasdaq 100
+  '^DJI':  Dow Jones
+  '^RUT':  Russell 2000
+  '^VIX':  VIX
+  '^TNX':  10Y UST
+  'DX-Y.NYB': DXY
+  'SOXX': SOXX ETF
+  'SMH':  SMH ETF
+  'GLD':  Gold ETF
+  'USO':  Oil ETF
+  'BTC-USD': Bitcoin
+  'ETH-USD': Ethereum

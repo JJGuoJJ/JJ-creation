@@ -1,34 +1,20 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* App-level tweaks (no global text-align) */
+.markdown-body {
+  color: hsl(var(--foreground));
+  font-size: 14px;
+  line-height: 1.7;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
+.markdown-body h1 { font-size: 1.75rem; font-weight: 600; margin: 1rem 0 0.75rem; letter-spacing: -0.02em; }
+.markdown-body h2 { font-size: 1.25rem; font-weight: 600; margin: 1.25rem 0 0.5rem; padding-bottom: 0.25rem; border-bottom: 1px solid hsl(var(--border)); }
+.markdown-body h3 { font-size: 1.05rem; font-weight: 600; margin: 1rem 0 0.4rem; }
+.markdown-body p { margin: 0.5rem 0; }
+.markdown-body code { background: hsl(var(--muted)); padding: 1px 6px; border-radius: 4px; font-size: 0.85em; }
+.markdown-body table { width: 100%; border-collapse: collapse; margin: 0.75rem 0; }
+.markdown-body th, .markdown-body td { padding: 8px 10px; border-bottom: 1px solid hsl(var(--border)); text-align: left; font-size: 13px; }
+.markdown-body th { background: hsl(var(--muted) / 0.6); font-weight: 600; }
+.markdown-body td.tabular { font-variant-numeric: tabular-nums; font-family: "IBM Plex Mono", monospace; }
+.markdown-body blockquote { border-left: 3px solid hsl(var(--primary)); padding: 6px 12px; background: hsl(var(--muted) / 0.5); margin: 0.5rem 0; color: hsl(var(--foreground)); border-radius: 4px; }
+.markdown-body strong { color: hsl(var(--primary)); font-weight: 600; }
+.markdown-body ul, .markdown-body ol { padding-left: 1.4rem; }
+.markdown-body li { margin: 0.2rem 0; }
+.markdown-body hr { border: none; border-top: 1px solid hsl(var(--border)); margin: 1rem 0; }

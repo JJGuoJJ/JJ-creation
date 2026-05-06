@@ -13,30 +13,34 @@
   },
   {
     "content": "Phase 2: 调用 design_agent 获取专业金融仪表盘设计规范",
-    "status": "in_progress"
+    "status": "completed"
   },
   {
     "content": "Phase 2: 设置后端环境（安装依赖、创建目录结构、配置 YAML）",
-    "status": "pending"
+    "status": "completed"
   },
   {
     "content": "Phase 2: 实现后端核心模块（data_providers, indicators, strategy, report）",
-    "status": "pending"
+    "status": "completed"
   },
   {
     "content": "Phase 2: 实现后端 FastAPI 端点（/api/market/overview, /api/portfolio, /api/watchlist, /api/reports 等）",
-    "status": "pending"
+    "status": "completed"
   },
   {
     "content": "Phase 2: 实现前端 React Dashboard（7 页面，含图表、F&G 仪表）",
-    "status": "pending"
+    "status": "completed"
   },
   {
-    "content": "Phase 2: 所有用户故事 U1-U12 覆盖验证",
-    "status": "pending"
+    "content": "Phase 2: 修复发现的问题（akshare 限流 -> Sina fallback、YAML 语法、报告变量重名）",
+    "status": "completed"
   },
   {
     "content": "Phase 2: 调用 testing_agent_v3 进行端到端测试",
+    "status": "in_progress"
+  },
+  {
+    "content": "Phase 2: 修复测试 agent 发现的问题（如果有）",
     "status": "pending"
   }
 ]
