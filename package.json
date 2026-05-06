@@ -1,0 +1,11 @@
+{
+  "name": "jj-creation",
+  "version": "1.0.0",
+  "description": "每日主力资金动向监控静态看板",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check src/app.js"
+  },
+  "license": "MIT"
+}
